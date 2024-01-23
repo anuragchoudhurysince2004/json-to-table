@@ -1,3 +1,6 @@
+<div>
+  <input type="text" [(ngModel)]="searchText" placeholder="Search by Name" />
+</div>
 <table>
   <thead>
     <tr>
@@ -5,7 +8,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of rows">
+    <tr *ngFor="let row of filteredRows">
       <td *ngFor="let column of columns">{{ row[column] }}</td>
     </tr>
   </tbody>
